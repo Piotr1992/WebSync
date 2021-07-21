@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmpWebSync", "BmpWebSync\BmpWebSync.csproj", "{5A070FCE-1E4F-4451-B784-EB048957D7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmpWebSyncLogic", "BmpWebSyncLogic\BmpWebSyncLogic.csproj", "{0FBED9E0-FB42-4356-86E8-551A50B6DD53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmpWebSyncTests", "BmpWebSyncTests\BmpWebSyncTests.csproj", "{BA839BFE-C81B-48FC-8F87-8D83B169969D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FBED9E0-FB42-4356-86E8-551A50B6DD53} = {0FBED9E0-FB42-4356-86E8-551A50B6DD53}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmpWebSyncWindowsService", "WindowsService1\BmpWebSyncWindowsService.csproj", "{806719A3-3FB5-4F1F-845E-84895F046E3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A070FCE-1E4F-4451-B784-EB048957D7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A070FCE-1E4F-4451-B784-EB048957D7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A070FCE-1E4F-4451-B784-EB048957D7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A070FCE-1E4F-4451-B784-EB048957D7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBED9E0-FB42-4356-86E8-551A50B6DD53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBED9E0-FB42-4356-86E8-551A50B6DD53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBED9E0-FB42-4356-86E8-551A50B6DD53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBED9E0-FB42-4356-86E8-551A50B6DD53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA839BFE-C81B-48FC-8F87-8D83B169969D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA839BFE-C81B-48FC-8F87-8D83B169969D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA839BFE-C81B-48FC-8F87-8D83B169969D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA839BFE-C81B-48FC-8F87-8D83B169969D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806719A3-3FB5-4F1F-845E-84895F046E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806719A3-3FB5-4F1F-845E-84895F046E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806719A3-3FB5-4F1F-845E-84895F046E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806719A3-3FB5-4F1F-845E-84895F046E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FDFC150-B549-4843-A927-AAF7E7911361}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/bmpconsulting
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BmpWebSync\\BmpWebSync.csproj
+		SccProjectName1 = BmpWebSync
+		SccLocalPath1 = BmpWebSync
+		SccProjectUniqueName2 = BmpWebSyncLogic\\BmpWebSyncLogic.csproj
+		SccProjectName2 = BmpWebSyncLogic
+		SccLocalPath2 = BmpWebSyncLogic
+		SccProjectUniqueName3 = BmpWebSyncTests\\BmpWebSyncTests.csproj
+		SccProjectName3 = BmpWebSyncTests
+		SccLocalPath3 = BmpWebSyncTests
+		SccProjectUniqueName4 = WindowsService1\\BmpWebSyncWindowsService.csproj
+		SccProjectName4 = WindowsService1
+		SccLocalPath4 = WindowsService1
+	EndGlobalSection
+EndGlobal

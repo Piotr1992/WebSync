@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FBED9E0-FB42-4356-86E8-551A50B6DD53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BmpWebSyncLogic</RootNamespace>
+    <AssemblyName>BmpWebSyncLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BMP">
+      <HintPath>..\..\BMP\BMP\BMP\bin\Debug\BMP.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\..\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="entities\StatusWarehouseProducts.cs" />
+    <Compile Include="entities\PricesProducts.cs" />
+    <Compile Include="entities\LongListObject.cs" />
+    <Compile Include="entities\LongLongObject.cs" />
+    <Compile Include="entities\LogUsage.cs" />
+    <Compile Include="entities\ProductWarehousePutJson.cs" />
+    <Compile Include="entities\ProductUserPricePutJson.cs" />
+    <Compile Include="entities\ProductPricePutJson.cs" />
+    <Compile Include="entities\Delete.cs" />
+    <Compile Include="entities\Product.cs" />
+    <Compile Include="entities\LangValue.cs" />
+    <Compile Include="entities\Files.cs" />
+    <Compile Include="entities\ProductProducerPutJson.cs" />
+    <Compile Include="entities\ProductFeaturePutJson.cs" />
+    <Compile Include="entities\ProductGroup.cs" />
+    <Compile Include="entities\QueryParam.cs" />
+    <Compile Include="entities\Statics.cs" />
+    <Compile Include="Groups.cs" />
+    <Compile Include="helpers\ApiHelper.cs" />
+    <Compile Include="helpers\DBHelper.cs" />
+    <Compile Include="helpers\FtpHelper.cs" />
+    <Compile Include="helpers\Json.cs" />
+    <Compile Include="helpers\ListExtensions.cs" />
+    <Compile Include="helpers\Logger.cs" />
+    <Compile Include="helpers\UsageLogger.cs" />
+    <Compile Include="helpers\ZipCompress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sql\b2b_files.sql" />
+    <Content Include="sql\b2b_divisionDataSynchronizedAndNot%28help to b2b_productGroup%29.sql" />
+    <Content Include="sql\b2b_productGroup.sql" />
+    <Content Include="sql\b2b_products.sql" />
+    <Content Include="sql\b2b_setStatusWarehousesProducts.sql" />
+    <Content Include="sql\b2b_setPricesProducts.sql" />
+    <Content Include="sql\b2b_groups.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="api\02. dodawanie aktualizacja grup produktowych.json" />
+    <None Include="api\03. usuwanie grupy produktowej.json" />
+    <None Include="api\04. dodwanie aktualizacja cech produktowych.json" />
+    <None Include="api\05. usuwanie cechy produktowej.json" />
+    <None Include="api\06. dodawnaie aktualizacja prducentow.json" />
+    <None Include="api\07. usuwanie producentow.json" />
+    <None Include="api\08. dodawanie, aktualizacja plików.json" />
+    <None Include="api\09. usuwanie plików.json" />
+    <None Include="api\10. dodawnie aktualizacja produktow.json" />
+    <None Include="api\11. usuwanie produktu.json" />
+    <None Include="api\12. ustawianie cen produktow.json" />
+    <None Include="api\13. ustawianie indywidualnych cen produktow.json" />
+    <None Include="api\14. ustawianie stanow magazynowych.json" />
+    <None Include="api\api_b2b.docx" />
+    <None Include="api\api_b2b_1.0.0.docx" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

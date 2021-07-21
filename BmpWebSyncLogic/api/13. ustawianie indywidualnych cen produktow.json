@@ -1,0 +1,1 @@
+[{"user_id":1,"prices":[{"product_id":1,"price":111,"currency":"EUR"},{"product_id":2,"price":222,"currency":"EUR"}]},{"user_id":2,"prices":[{"product_id":1,"price":444,"currency":"PLN"},{"product_id":2,"price":666,"currency":"PLN"}]}]

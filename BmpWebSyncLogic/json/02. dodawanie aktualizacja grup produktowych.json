@@ -1,0 +1,1 @@
+[{"id":"1","parent":null,"name":{"pl":"Grupa testowa"},"code":{"pl":"GR_TEST"},"files":[1,2]},{"id":"2","parent":1,"name":{"pl":"Grupa testowa1"},"code":{"pl":"GR_TEST1"},"files":[1,2]}]
